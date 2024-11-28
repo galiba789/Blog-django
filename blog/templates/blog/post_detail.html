@@ -43,7 +43,7 @@
     <form method="post" action=".">
         {% csrf_token %}
 
-        {% crispy form %}
+        {{ forms.as_p }}
 
         <div class="field">
             <div class="control">
