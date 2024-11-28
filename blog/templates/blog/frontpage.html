@@ -1,0 +1,17 @@
+
+<div class="container container-black">
+    {% extends 'blog/base.html'%}
+        {% block content %}
+            {% for post in posts %}
+                <table class="table">
+                    <tr><h2 class="subtitle">{{ post.title }}</div></tr>
+                    
+                    <small>Posted at {{ post.date_added }}</small>
+
+                    <p>{{ post.intro }}</p>
+                    
+                    <a class="btn btn-success" href="{% url 'post_detail' post.slug %}">Read More</a>
+                </table>
+            {% endfor%}
+        {% endblock %}
+</div>
